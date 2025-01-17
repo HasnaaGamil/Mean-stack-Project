@@ -1,0 +1,11 @@
+const express=require("express");
+const {placeOrder,getAllOrders,updateOrderStatus,getUserOrders,getNumberOrders,setDeliveryDetails}=require("../controllers/order.controller");
+const router=express.Router();
+const auth=require("../util/auth");
+router.post("",auth.authMw,placeOrder);
+router.put('/:id/status',auth.authMw ,updateOrderStatus);
+router.get("/user",auth.authMw, getUserOrders);
+router.get("", auth.authMw,getAllOrders);
+router.get("", auth.authMw,getNumberOrders);
+router.patch('/:id/delivery-details', setDeliveryDetails);
+module.exports=router;
