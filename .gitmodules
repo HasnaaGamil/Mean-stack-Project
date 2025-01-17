@@ -1,0 +1,3 @@
+[submodule "myproject/e-commerceApp"]
+	path = myproject/e-commerceApp
+	url = https://github.com/HasnaaGamil/Mean-stack-Project.git
